@@ -1,6 +1,7 @@
 import React from 'react';
 import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
+import MomentUtils from '@date-io/moment';
 
 export class Todo extends React.Component {
 
@@ -14,7 +15,7 @@ export class Todo extends React.Component {
             <TableRow key={this.props.name}>
                 <TableCell align="center">{this.props.text}</TableCell>
                 <TableCell align="center">{this.props.priority}</TableCell>
-                <TableCell align="center">{this.props.dueDate.format('DD-MM-YYYY')}</TableCell>
+                <TableCell align="center">{this.props.dueDate.format('DD/MM/YYYY')}</TableCell>
             </TableRow>
             
         );
